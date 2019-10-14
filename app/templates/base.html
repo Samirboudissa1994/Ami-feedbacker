@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<title>{{ title }} - Kurssipalaute järjestelmä</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+<body>
+	<div id="navigointi"> Feedbacker: <a href="/index">Etusivu</a>
+		{% if current_user.is_authenticated %}
+		- <a href="/courses">Kurssit</a>
+		- <a href="/feedback">Kurssipalaute</a>
+		- <a href="/instructor_list">Kouluttajat</a>
+		- <a href="/feedback_view">Katso palaute</a>
+		- <a href="/course_add">Lisää kurssi</a>
+		- <a href="/instructor_add">Lisää kouluttaja</a>
+		- <a href="/admin_logout">Kirjaudu ulos</a>
+		{% else %}
+		- <a href="/courses">Kurssit</a>
+		- <a href="/feedback">Kurssipalaute</a>
+		- <a href="/instructor_list">Kouluttajat</a>
+		- <a href="/admin_login">Admin</a>
+		{% endif %}
+
+	</div>
+	<hr>
+
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	<script>
+		var messages = {{ messages | safe }};
+		for (var i = 0; i < messages.length; i++) {
+			alert(messages[i]);
+		}
+	</script>
+	{% endif %}
+	{% endwith %}
+	{% block content %} {% endblock %}
+</body>
+
+</html>

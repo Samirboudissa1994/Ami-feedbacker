@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <div id="rcorners">
+        <p class=key_prompt>Anna kurssiavain:</p>
+        {{ form.course_key(size=6) }}
+        <p>{{ form.submit() }}</p>
+
+    </div>
+</form>
+
+{% endblock %}

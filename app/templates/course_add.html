@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Lisää kurssi</h1>
+
+    <form name=new_course action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.instructor_ID.label }}<br>
+            {{ form.instructor_ID(size=1) }}
+            {% for error in form.instructor_ID.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.courseName.label }}<br>
+            {{ form.courseName(size=32) }}
+            {% for error in form.courseName.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.courseInfo.label }}<br>
+            {{ form.courseInfo(size=32) }}
+            {% for error in form.courseInfo.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.courseStartDate.label }}<br>
+            {{ form.courseStartDate(size=32) }}
+            {% for error in form.courseStartDate.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.courseEndDate.label }}<br>
+            {{ form.courseEndDate(size=32) }}
+            {% for error in form.courseEndDate.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+{% endblock %}

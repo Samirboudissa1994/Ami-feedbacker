@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h2>Kirjaudu Adminina</h2>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+                <p>
+                    {{ form.username.label }}
+                    {{ form.username }}
+                </p>
+                <p>
+                    {{ form.password.label }}
+                    {{ form.password }}
+                </p>
+            <p>
+                {{ form.submit() }}
+            </p>
+        </form>
+
+    </div>
+{% endblock %}

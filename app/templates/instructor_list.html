@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Kouluttajat</h1>
+
+<table id="kurssit">
+  {% for instructor in instructors %}
+  <tr>
+    <td>{{ instructor[0] }} - {{ instructor[2] }} {{ instructor[1] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

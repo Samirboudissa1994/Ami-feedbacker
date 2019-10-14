@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 id="kurssitotsikko">Amiforum</h2>
+    <div id="kurssit">
+    {% for course in courses %}
+            {{ course[2] }} <br>
+            {{ course[8] }} {{ course[9] }} <br>
+            Kurssiavain: {{ course[6] }} <br>
+            Palautelinkki <a href=/feedback?key={{ course[6] }}>/feedback?key={{ course[6] }}</a> <br>
+            {{ course[4] }} - {{ course[5] }} <br>
+            {{ course[3] }} <br>
+            <hr>
+            {% endfor %}
+    </div>
+{% endblock %}

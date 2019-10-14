@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Kaikki palaute</h1>
+
+<table id="kurssit">
+  {% for fb in feedback %}
+  <tr>
+    <td>{{ fb[0] }} - {{ fb[1] }} {{ fb[2] }} {{ fb[3] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
