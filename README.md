@@ -10,7 +10,7 @@ Create python virtualenv, and activate it and install requirements
 ```
 $ python3 -m venv venv_feedbacker
 $ . venv_feedbacker/bin/activate
-$ cd ami-feedbacker
+$ cd Ami-feedbacker
 $ pip install -r requirements.txt
 ```
 
