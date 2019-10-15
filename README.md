@@ -1,9 +1,9 @@
-# ami-feedbacker
+# Ami-feedbacker
 kurssipalautejärjestelmä
 
 Clone repo
 ```
-$ git clone git@github.com:pekkosams/ami-feedbacker.git
+$ git clone https://github.com/Samirboudissa1994/Ami-feedbacker.git
 ```
 
 Create python virtualenv, and activate it and install requirements 
@@ -21,14 +21,14 @@ $ gunicorn -b 0.0.0.0:8080 main:app
 
 Build & run docker
 ```
-docker build -t ami-feedbacker:latest .
-docker run --name ami-fb -d -p 8080:8080 ami-feedbacker:latest
+docker build -t Ami-feedbacker:latest .
+docker run --name Ami-fb -d -p 8080:8080 Ami-feedbacker:latest
 ```
 
 gcp sdk console commands to build and deploy, 
 ```
-$ git clone https://github.com/pekkosams/ami-feedbacker
-$ cd ami-feedbacker
-$ gcloud builds submit --tag gcr.io/ami-feedbacker/ami-feedbacker
-$ gcloud beta run deploy --image gcr.io/ami-feedbacker/ami-feedbacker --platform managed
+$ git clone https://github.com/Samirboudissa1994/Ami-feedbacker.git
+$ cd Ami-feedbacker
+$ gcloud builds submit --tag gcr.io/Ami-feedbacker/Ami-feedbacker
+$ gcloud beta run deploy --image gcr.io/Ami-feedbacker/Ami-feedbacker --platform managed
 ```
