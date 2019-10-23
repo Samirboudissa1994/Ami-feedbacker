@@ -5,6 +5,11 @@ Clone repo
 ```
 $ git clone https://github.com/Samirboudissa1994/Ami-feedbacker.git
 ```
+You need to have a Virtualenv on your computer in order to use this program. If you don't have it, you can install it by typing the following in your terminal:
+
+```
+sudo apt-get install python3-venv
+```
 
 Create python virtualenv, and activate it and install requirements 
 ```
