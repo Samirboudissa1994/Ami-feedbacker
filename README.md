@@ -1,7 +1,7 @@
 # Ami-feedbacker
 kurssipalautejärjestelmä
 
-Clone repo
+First clone the repository to your computer
 ```
 $ git clone https://github.com/Samirboudissa1994/Ami-feedbacker.git
 ```
